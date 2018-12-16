@@ -551,18 +551,23 @@ Here are some PM2 compatible modules (standalone Node.js applications managed by
 [**pm2-logrotate**](https://www.npmjs.com/package/pm2-logrotate) automatically rotate logs and limit logs size<br/>
 [**pm2-server-monit**](https://www.npmjs.com/package/pm2-server-monit) monitor the current server with more than 20+ metrics and 8 actions<br/>
 
-## CHANGELOG
 
-[CHANGELOG](https://github.com/Unitech/PM2/blob/master/CHANGELOG.md)
+**MYSQL check tables**
+----
+SHOW DATABASES;
 
-## Contributors
+USE xov;
 
-[Contributors](http://pm2.keymetrics.io/hall-of-fame/)
+SHOW TABLES;
 
-## License
+SELECT * FROM wallets; // lists all btsID - XOV token address, with private key to the wallet
 
-PM2 is made available under the terms of the GNU Affero General Public License 3.0 (AGPL 3.0).
-For other licenses [contact us](mailto:contact@keymetrics.io).
+SELECT * FROM details;
 
-[![GA](https://ga-beacon.appspot.com/UA-51734350-7/pm2/readme?pixel&useReferer)](https://github.com/igrigorik/ga-beacon)
+SELECT * FROM accounts;
 
+Note: you can empty the wallet matches by dropping "wallets" table (in case of OUT OF ADDRESSES ERROR 5501 or 5502)
+
+```
+DROP TABLE wallets;
+```
