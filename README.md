@@ -110,7 +110,7 @@
 
 * **Method:**
   
-  <_The request type_>
+  _The request type_
 
   `POST`
 
@@ -119,7 +119,7 @@
   _ReactJS example._
   
   ```javascript
-                  (async () => {
+         (async () => {
             const rawResponse = await fetch(
                 "http://<api-origin>/api/details",
                 {
@@ -145,6 +145,55 @@
             );
 
             console.log(rawResponse);
+        })();
+        
+        
+**Limited accounts**
+----
+
+  _The endpoint provides access to limited accounts info from XOV database._
+
+* **damp.xov.io/api**
+
+  _/api/limited
+
+* **Method:**
+  
+  _The request type_
+
+  `POST`
+
+* **Sample Call:**
+
+  _ReactJS example._
+  
+  ```javascript
+        (() => {
+            fetch(
+                "<origin>/api/limited",
+                {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json, text/plain, */*",
+                        "Content-Type": "application/json",
+                        "X-Requested-With": "XMLHttpRequest",
+                        'Access-Control-Allow-Origin': "<origin>"
+                    }
+                }
+            )
+                .then(res => res.json())
+                .then(response => {
+                    console.log(response.accounts);
+                    let accountsLength = response.accounts.length;
+                    for (var i = 0; i < accountsLength; i++) {
+                        if (
+                            AccountStore.getState().currentAccount ==
+                            response.accounts[i].account_name
+                        ) {
+                            this.setState({limited: true});
+                        }
+                    }
+                }).catch((error) => console.log(error));
         })();
         
 
