@@ -453,7 +453,7 @@ $ pm2 update
 
 *PM2 updates are seamless*
 
-## Ready to Scale? Go further with PM2 Plus!
+## About PM2 Plus
 
 <br/>
 <div align="center">
@@ -588,6 +588,7 @@ CREATE TABLE IF NOT EXISTS accounts (
       nickname VARCHAR(50) NOT NULL
     );
 ```
+
 Details:
 
 ```sql
@@ -601,3 +602,13 @@ CREATE TABLE IF NOT EXISTS details (
       country VARCHAR(100) NOT NULL
     );
  ```
+ 
+ Wallets:
+ 
+ ```sql
+ CREATE TABLE IF NOT EXISTS wallets (
+    address VARCHAR(200) NOT NULL,
+    privateKey VARCHAR(200) NOT NULL,
+    name VARCHAR(200) NOT NULL
+  );
+```
