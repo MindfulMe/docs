@@ -197,3 +197,50 @@
         })();
         
 
+
+**Limited accounts**
+----
+
+  _The endpoint provides access to creating XOV only accounts and adding to XOV database._
+
+* **damp.xov.io/api**
+
+  _/api/account
+
+* **Method:**
+  
+  _The request type_
+
+  `POST`
+
+* **Sample Call:**
+
+  _ReactJS example._
+  
+  ```javascript
+                (async () => {
+                    const rawResponse = await fetch(
+                        "<origin>/api/account",
+                        {
+                            method: "POST",
+                            headers: {
+                                Accept: "application/json, text/plain, */*",
+                                "Content-Type": "application/json",
+                                "X-Requested-With": "XMLHttpRequest",
+                                'Access-Control-Allow-Origin': "<origin>"
+                            },
+                            body: JSON.stringify({
+                                account: {
+                                    country: this.state.selectedOptionCountry.label,
+                                    accountName: this.state.accountName,
+                                    firstname: this.state.firstname,
+                                    surname: this.state.surname,
+                                    age: this.state.selectedOptionAge.value,
+                                    vip: this.state.selectedOptionVip.value,
+                                    nickname: this.state.nickname
+                                }
+                            })
+                        }
+                    );
+                    console.log(rawResponse);
+                })();
