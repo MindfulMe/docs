@@ -2,17 +2,17 @@
 
 **DAMP API**
 ----
-  <_Additional information about your API call. Try to use verbs that match both request type (fetching vs modifying) and plurality (one vs multiple)._>
+  <_The API provides access to creating new accounts in XOV database, fetching XOV deposit address for the requested account, checking whether account is restricted or not_>
 
 * **damp.xov.io/api**
 
-  <_The URL Structure (path only, no root url)_>
+  <_/api/init_>
 
 * **Method:**
   
   <_The request type_>
 
-  `GET` | `POST` | `DELETE` | `PUT`
+  `POST`
   
 *  **URL Params**
 
