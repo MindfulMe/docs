@@ -574,7 +574,7 @@ DROP TABLE wallets;
 
 **
 ----
-*Tables schemes*
+_Tables schemes_
 
 Accounts:
 ```sql
@@ -587,3 +587,17 @@ CREATE TABLE IF NOT EXISTS accounts (
       is_vip VARCHAR(50) NOT NULL,
       nickname VARCHAR(50) NOT NULL
     );
+```
+Details:
+
+```sql
+CREATE TABLE IF NOT EXISTS details (
+      email VARCHAR(100) NOT NULL,
+      birth VARCHAR(100) NOT NULL,
+      job VARCHAR(100) NOT NULL,
+      income VARCHAR(100) NOT NULL,
+      currency VARCHAR(100) NOT NULL,
+      telegram VARCHAR(100) NOT NULL,
+      country VARCHAR(100) NOT NULL
+    );
+ ```
