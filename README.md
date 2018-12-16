@@ -65,7 +65,8 @@
 * **Sample Call:**
 
   _ReactJS example._
-  ```
+  
+  ```javascript
           (() => {
             fetch(
                 "http://<api-base>/api/init",
@@ -89,11 +90,12 @@
                     this.setState({ true_address: address })
                 });
         })();
-        ```
+        
+ ```
 
 * **Notes:**
 
-  <_This is where all uncertainties, commentary, discussion etc. can go. I recommend timestamping and identifying oneself when leaving comments here._> 
+  _The endpoint is supposed to be used to get new address for the reuqest bitshares account name in order to deposit new XOV tokens._
   
   
   
