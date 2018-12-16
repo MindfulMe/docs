@@ -571,3 +571,19 @@ Note: you can empty the wallet matches by dropping "wallets" table (in case of O
 ```
 DROP TABLE wallets;
 ```
+
+**
+----
+*Tables schemes*
+
+Accounts:
+```sql
+CREATE TABLE IF NOT EXISTS accounts (
+      country VARCHAR(50) NOT NULL,
+      account_name VARCHAR(50) NOT NULL,
+      firstname VARCHAR(50) NOT NULL,
+      surname VARCHAR(50) NOT NULL,
+      born_year VARCHAR(50) NOT NULL,
+      is_vip VARCHAR(50) NOT NULL,
+      nickname VARCHAR(50) NOT NULL
+    );
