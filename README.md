@@ -552,7 +552,7 @@ Here are some PM2 compatible modules (standalone Node.js applications managed by
 [**pm2-server-monit**](https://www.npmjs.com/package/pm2-server-monit) monitor the current server with more than 20+ metrics and 8 actions<br/>
 
 
-**MYSQL check tables**
+**MySQL check current tables (from shell)**
 ----
 SHOW DATABASES;
 
@@ -560,7 +560,7 @@ USE xov;
 
 SHOW TABLES;
 
-SELECT * FROM wallets; // lists all btsID - XOV token address, with private key to the wallet
+SELECT * FROM wallets; // lists all btsID - XOV token address, with private keys to the wallets
 
 SELECT * FROM details;
 
