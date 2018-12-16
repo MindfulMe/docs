@@ -64,14 +64,14 @@
   ```
           (() => {
             fetch(
-                "http://51.141.11.54/api/init",
+                "http://<api-base>/api/init",
                 {
                     method: "POST",
                     headers: {
                         Accept: "application/json, text/plain, */*",
                         "Content-Type": "application/json",
                         "X-Requested-With": "XMLHttpRequest",
-                        'Access-Control-Allow-Origin': "http://51.141.11.54"
+                        'Access-Control-Allow-Origin': "<api-base>"
                     },
                     body: JSON.stringify({
                         name: AccountStore.getState().currentAccount
