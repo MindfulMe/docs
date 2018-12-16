@@ -2,7 +2,7 @@
 
 **DAMP API**
 ----
-  <_The API provides access to creating new accounts in XOV database, fetching XOV deposit address for the requested account, checking whether account is restricted or not_>
+  _The API provides access to creating new accounts in XOV database, fetching XOV deposit address for the requested account, checking whether account is restricted or not, and also adding additional inforamtion to the XOV account (which is then stored in mysql (MariaDB) table._
 
 * **damp.xov.io/api**
 
@@ -16,19 +16,28 @@
   
 *  **URL Params**
 
-   <_If URL params exist, specify them in accordance with name mentioned in URL section. Separate into optional and required. Document data constraints._> 
+   _The request bundle is sent via post request body, no url params._ 
 
    **Required:**
  
-   `id=[integer]`
+   `no required parameters`
 
    **Optional:**
  
-   `photo_id=[alphanumeric]`
+   `no optional parameters`
 
 * **Data Params**
 
-  <_If making a post request, what should the body payload look like? URL Params rules apply here too._>
+  _The request bundle is sent via post request body._
+  
+    **Required:**
+ 
+   `name: [string]`
+
+   **Optional:**
+ 
+   `no optional parameters`
+
 
 * **Success Response:**
   
