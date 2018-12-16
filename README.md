@@ -155,7 +155,7 @@
 
 * **damp.xov.io/api**
 
-  _/api/limited
+  _/api/limited_
 
 * **Method:**
   
@@ -198,14 +198,14 @@
         
 
 
-**Limited accounts**
+**New XOV account**
 ----
 
   _The endpoint provides access to creating XOV only accounts and adding to XOV database._
 
 * **damp.xov.io/api**
 
-  _/api/account
+  _/api/account_
 
 * **Method:**
   
