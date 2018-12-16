@@ -6,7 +6,7 @@
 
 * **damp.xov.io/api**
 
-  <_/api/init_>
+  _/api/init_
 
 * **Method:**
   
@@ -41,26 +41,51 @@
 
 * **Success Response:**
   
-  <_What should the status code be on success and is there any returned data? This is useful when people need to to know what their callbacks should expect!_>
+  _Returns address_
 
-  * **Code:** 200 <br />
-    **Content:** `{ id : 12 }`
+  * **Code:** 200 
+    **Content:** `{ address : <very very long hash address> }`
  
 * **Error Response:**
 
-  <_Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be._>
+  _The possible error responses:_
 
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "Log in" }`
+  * **Code:** THE ADDRESS ALREADY IN USE BY AN OTHER BTS ACCOUNT (5501)
+    **Content:** `{ address : "out of addresses (error 5501)" }`
 
   OR
 
-  * **Code:** 422 UNPROCESSABLE ENTRY <br />
-    **Content:** `{ error : "Email Invalid" }`
+  * **Code:** NEW ADDRESSES ARE NOT AVAILBLE AT THE MOMENT (5502)
+    **Content:** `{ error : "out of addresses (error 5502)" }`
 
 * **Sample Call:**
 
-  <_Just a sample call to your endpoint in a runnable format ($.ajax call or a curl request) - this makes life easier and more predictable._> 
+  _ReactJS example._
+  ```
+          (() => {
+            fetch(
+                "http://51.141.11.54/api/init",
+                {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json, text/plain, */*",
+                        "Content-Type": "application/json",
+                        "X-Requested-With": "XMLHttpRequest",
+                        'Access-Control-Allow-Origin': "http://51.141.11.54"
+                    },
+                    body: JSON.stringify({
+                        name: AccountStore.getState().currentAccount
+                    })
+                }
+            )
+                .then(res => res.json())
+                .then(response => {
+                    let address = response.address;
+                    console.log(address);
+                    this.setState({ true_address: address })
+                });
+        })();
+        ```
 
 * **Notes:**
 
