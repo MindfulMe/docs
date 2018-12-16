@@ -2,6 +2,8 @@
 
 **DAMP API**
 ----
+
+**Get new address**
   _The API provides access to creating new accounts in XOV database, fetching XOV deposit address for the requested account, checking whether account is restricted or not, and also adding additional inforamtion to the XOV account (which is then stored in mysql (MariaDB) table._
 
 * **damp.xov.io/api**
